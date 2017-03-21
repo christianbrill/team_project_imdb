@@ -10,9 +10,6 @@
 		<!-- Latest compiled and minified CSS for Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<!-- jQuery -->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="css/main.css">
 	</head>
@@ -31,6 +28,11 @@
 					<a href="">Add a Movie</a>
 				</li>
 			</ul>
-			<input type="search" placeholder="Search"><input type="submit" value="OK">
+
+			<form action="categories.php" method="get">
+				
+				<input type="search" name="search" placeholder="Search" value="<?= isset($search) ? $search : '' ?>">
+				<input type="submit" value="Ok">
+			</form>
 		</nav>
 		<hr>

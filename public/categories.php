@@ -5,10 +5,6 @@ require dirname(dirname(__FILE__)).'/inc/config.php';
 
 
 
-
-
-
-
 //=====================================
 // FILE INCLUSION
 //=====================================
