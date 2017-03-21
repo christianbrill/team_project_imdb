@@ -1,11 +1,12 @@
 <main>
     <div id="flexboxCat">
         <div id="posterCat">
-
+            <img src="<?= $movieInfo['mov_poster'] ?>" alt="<?= $movieInfo['mov_title']?> Poster">
         </div>
 
         <div id="movieInfoCat">
-
+            <h3><?= $movieInfo['mov_title'] ?></h3>
+            <p><?= $movieInfo['mov_info'] ?></p>
         </div>
 
         <div id="buttonsCat">
