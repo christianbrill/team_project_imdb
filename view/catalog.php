@@ -37,7 +37,7 @@
 
     <?php if($page>1): ?>
         <button>
-            <a href="?page=<?= $page-1?>">Previous</a>
+            <a href="?search=<?=$search?>&page=<?= $page-1?>">Previous</a>
         </button>
     <?php endif; ?>
 
