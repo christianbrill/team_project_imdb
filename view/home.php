@@ -1,6 +1,6 @@
 <p>Eodem tempore etiam Hymetii praeclarae indolis viri negotium est actitatum, cuius hunc novimus esse textum. cum Africam pro consule regeret Carthaginiensibus victus inopia iam lassatis, ex horreis Romano populo destinatis frumentum dedit, pauloque postea cum provenisset segetum copia, integre sine ulla restituit mora.
 </p>
-<form action="categories.php" method="get">	
+<form action="catalog.php" method="get">	
 	<input type="search" name="search" placeholder="Recherche" value="<?= isset($search) ? $search : '' ?>">
 	<input type="submit" value="Ok">
 </form>

@@ -29,7 +29,7 @@
 				</li>
 			</ul>
 
-			<form action="categories.php" method="get">
+			<form action="catalog.php" method="get">
 				
 				<input type="search" name="search" placeholder="Search" value="<?= isset($search) ? $search : '' ?>">
 				<input type="submit" value="Ok">

@@ -3,9 +3,17 @@
 // access to config file
 require dirname(dirname(__FILE__)).'/inc/config.php';
 
+
+//creates the page offset
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+$nbPerPage = 2;
+$offset = ($page - 1) * $nbPerPage;
+
+//get the searched value
 $searchWord = isset($_GET['search']) ? trim($_GET['search']) : '';
 
-$movieInfo = getInfo($searchWord);
+//function to get sql result
+$movieInfo = infoAllMovies($searchWord, $nbPerPage, $offset);
 
 
 //=====================================
