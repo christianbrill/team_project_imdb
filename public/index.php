@@ -1,6 +1,8 @@
 <?php
 require dirname(dirname(__FILE__)).'/inc/config.php';
 
+$infoCategories = infoCategories();
+
 
 //=====================================
 // FILE INCLUSION

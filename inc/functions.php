@@ -1,6 +1,9 @@
 <?php
 
-// this function will allow us to select all the available movie information in the database
+// ==============================================
+// this function will allow us to select all the
+// available movie information in the database
+// ==============================================
 function infoAllMovies($search='', $nbPerPage=0, $offset=0) {
     global $pdo;
 
@@ -25,7 +28,7 @@ function infoAllMovies($search='', $nbPerPage=0, $offset=0) {
             LIMIT '.$nbPerPage.' OFFSET '.$offset.'
         ';
     }
- 
+
     $request = $pdo->prepare($movieInfoSelect);
 
     if (!empty($search)) {
@@ -40,9 +43,13 @@ function infoAllMovies($search='', $nbPerPage=0, $offset=0) {
     }
 
     return false;
-   
+
 }
 
+
+// ==============================================
+// All information about one movie
+// ==============================================
 function infoOneMovie ($movieId){
     global $pdo;
 
@@ -74,6 +81,11 @@ function infoOneMovie ($movieId){
     return false;
 }
 
+
+// ==============================================
+// this function counts the available movies
+// in the database to calculate the page count
+// ==============================================
 function totalMovies(){
     global $pdo;
     $oneMovieInfoSelect = '
@@ -82,6 +94,54 @@ function totalMovies(){
     ';
 
     $request = $pdo->prepare($oneMovieInfoSelect);
+
+    if ($request->execute() === false ) {
+        print_r( $request->errorInfo() );
+    }else {
+        return $request->rowCount();
+    }
+    return false;
+}
+
+
+
+// ==============================================
+// this function selects the categories
+// ==============================================
+function infoCategories() {
+    global $pdo;
+
+    $categoryRequest = '
+    SELECT *
+    FROM category
+    LIMIT 4
+    ';
+
+    $request = $pdo->prepare($categoryRequest);
+
+    if ($request->execute() === false ) {
+        print_r( $pdo->errorInfo() );
+    } else {
+        $categoryInfo = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $categoryInfo;
+    }
+
+    return false;
+}
+
+
+// ==============================================
+// this function counts the number of categories
+// in the database to show on homepage
+// ==============================================
+function totalCategories(){
+    global $pdo;
+    $categorySelect = '
+        SELECT *
+        FROM category
+    ';
+
+    $request = $pdo->prepare($categorySelect);
 
     if ($request->execute() === false ) {
         print_r( $request->errorInfo() );
