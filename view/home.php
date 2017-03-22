@@ -7,6 +7,13 @@
 <ul>
 	<!-- We're using a foreach loop to populate the unordered list -->
 	<?php foreach($infoCategories as $category) : ?>
-		<li><a href="catalog.php"><?= $category['cat_title'] ?> (totalCategories())</a></li>
+		<li>
+			<a href="catalog.php"><?= $category['cat_title'] ?> (
+				<?php foreach($totalCategories as $number){ 
+					echo $number;
+				} ?>
+			)
+			</a>
+		</li>
 	<?php endforeach; ?>
 </ul>

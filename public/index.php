@@ -3,6 +3,10 @@ require dirname(dirname(__FILE__)).'/inc/config.php';
 
 $infoCategories = infoCategories();
 
+$totalCategories = totalCategories();
+
+
+var_dump($totalCategories);
 
 //=====================================
 // FILE INCLUSION

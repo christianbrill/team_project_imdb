@@ -45,7 +45,6 @@ function infoAllMovies($search='') {
     }
 
     return false;
-
 }
 
 
@@ -114,9 +113,9 @@ function infoCategories() {
     global $pdo;
 
     $categoryRequest = '
-    SELECT *
-    FROM category
-    LIMIT 4
+        SELECT *
+        FROM categories
+        LIMIT 4
     ';
 
     $request = $pdo->prepare($categoryRequest);
@@ -138,9 +137,11 @@ function infoCategories() {
 // ==============================================
 function totalCategories(){
     global $pdo;
+
     $categorySelect = '
-        SELECT *
-        FROM category
+        SELECT count(*) cat_title
+        FROM categories
+        GROUP BY cat_title  
     ';
 
     $request = $pdo->prepare($categorySelect);
@@ -148,7 +149,8 @@ function totalCategories(){
     if ($request->execute() === false ) {
         print_r( $request->errorInfo() );
     }else {
-        return $request->rowCount();
+         $categoryNb = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $categoryNb;
     }
     return false;
 }
