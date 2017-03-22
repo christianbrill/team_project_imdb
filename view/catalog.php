@@ -1,4 +1,16 @@
 <main>
+    <!-- <nav>
+        <ul>
+            <li>
+                <select>
+                <?php foreach(): ?>
+                    <option><?=  ?></option>                
+                </select>
+                <?php  ?>
+            </li>
+            <li></li>
+        </ul>
+    </nav> -->
     <!-- Displays a movie for each matching result -->
     <?php foreach($movieInfo as $movie) : ?>
     <div id="flexboxCat">
@@ -35,7 +47,8 @@
     </div>
     <?php endforeach; ?>
 
-    <?php if($page>1): ?>
+
+<!--     <?php if($page>1): ?>
         <button>
             <a href="?search=<?=$search?>&page=<?= $page-1?>">Previous</a>
         </button>
@@ -45,5 +58,6 @@
         <button>
             <a href="?page=<?= $page+1?>">Next</a>
         </button>
-    <?php endif; ?>
+    <?php endif; ?> -->
+
 </main>
