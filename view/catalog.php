@@ -3,10 +3,10 @@
         <ul>
             <li>
                 <select>
-                <?php foreach(): ?>
-                    <option><?=  ?></option>                
+                 foreach(): ?>
+                    <option>  ?></option>
                 </select>
-                <?php  ?>
+                  ?>
             </li>
             <li></li>
         </ul>

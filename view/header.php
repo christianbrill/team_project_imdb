@@ -24,13 +24,13 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="">Home</a>
+					<a href="index.php">Home</a>
 				</li>
 				<li>
-					<a href="">Categories</a>
+					<a href="categories.php">Categories</a>
 				</li>
 				<li>
-					<a href="">Add a Movie</a>
+					<a href="addmovie.php">Add a Movie</a>
 				</li>
 
 				<li id="searchbox">

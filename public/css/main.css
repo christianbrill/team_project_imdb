@@ -41,7 +41,7 @@ nav ul li a:hover {
     height: 33px;
 }
 
-[type="search"] {
+#searchbox [type="search"] {
     border: none;
     color: black;
     font-family: Roboto, sans-serif;
@@ -49,7 +49,7 @@ nav ul li a:hover {
     margin-right: -5px;
 }
 
-[type="submit"] {
+#searchbox [type="submit"] {
     background: #f1c40f;
     border: none;
     color: black;
@@ -65,14 +65,82 @@ Movie Detail Page
 #flexbox {
     display: flex;
     flex-flow: row nowrap;
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
     justify-content: space-around;
+    margin: 50px auto;
+    width: 50%;
+}
+
+#imageSection img, #imageSection p {
+    margin-bottom: 30px;
 }
 
 #imageSection {
-    margin-right: 20px;
+    margin-right: 40px;
 }
+
+/* margin added to individual elements */
+#movieInfo h2, #movieInfo h3, #synopsis, #actors, #path {
+    margin-bottom: 20px;
+}
+
+#movieInfo h2 {
+    font-size: 3em;
+}
+
+#movieInfo a:hover {
+    text-decoration: none;
+}
+
+#genre {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* spans */
+.spantrait {
+    color: darkred;
+    font-weight: bold;
+}
+
 
 
 /*===========================
 Movie List Page
 ===========================*/
+#flexboxCat {
+    margin: 50px auto;
+    width: 350px;
+}
+
+#flexboxCat img {
+    width: 100%;
+    height: auto;
+}
+
+#movieInfoCat h3 {
+    font-size: 1.3em;
+}
+
+#movieInfoCat p {
+    font-size: 1.1em;
+}
+
+/* headline and paragraph below image*/
+#movieInfoCat h3, #movieInfoCat p {
+    margin: 20px 0;
+}
+
+/* buttons */
+#buttonsCat button {
+    background: black;
+    border: none;
+    padding: 10px;
+}
+
+#buttonsCat button a {
+    color: #f1c40f;
+    font-weight: bold;
+    text-decoration: none;
+}
