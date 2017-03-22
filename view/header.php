@@ -27,12 +27,13 @@
 				<li>
 					<a href="">Add a Movie</a>
 				</li>
-			</ul>
 
-			<form action="catalog.php" method="get">
-				
-				<input type="search" name="search" placeholder="Search" value="<?= isset($search) ? $search : '' ?>">
-				<input type="submit" value="Ok">
-			</form>
+				<li id="searchbox">
+					<form action="catalog.php" method="get">
+						<input type="search" name="search" placeholder="Search" value="<?= isset($search) ? $search : '' ?>">
+						<input type="submit" value="Ok">
+					</form>
+				</li>
+			</ul>
 		</nav>
 		<hr>

@@ -11,6 +11,20 @@ main {
 }
 
 /*===========================
+Header
+===========================*/
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+
+/*===========================
 Movie Detail Page
 ===========================*/
 #flexbox {
