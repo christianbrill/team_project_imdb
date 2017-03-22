@@ -14,14 +14,49 @@ main {
 Header
 ===========================*/
 nav {
+    background: black;
+    color: #f1c40f;
+    font-family: 'Abril Fatface', cursive;
+    padding: 45px;
     width: 100%;
 }
 
 nav ul {
     display: flex;
-    justify-content: space-around;
     flex-flow: row nowrap;
+    justify-content: space-around;
 }
+
+nav ul li a {
+    color: #f1c40f;
+    font-size: 2.5em;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+#searchbox form {
+    height: 33px;
+}
+
+[type="search"] {
+    border: none;
+    color: black;
+    font-family: Roboto, sans-serif;
+    height: 100%;
+    margin-right: -5px;
+}
+
+[type="submit"] {
+    background: #f1c40f;
+    border: none;
+    color: black;
+    height: 100%;
+    padding: 8px;
+}
+
 
 
 /*===========================
