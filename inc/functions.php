@@ -1,16 +1,12 @@
 <?php
 
-<<<<<<< HEAD
 // ==============================================
 // this function will allow us to select all the
 // available movie information in the database
 // ==============================================
-function infoAllMovies($search='', $nbPerPage=0, $offset=0) {
-=======
-// this function will allow us to select all the available movie information in the database
-//function infoAllMovies($search='', $nbPerPage=0, $offset=0) {
+
+// function infoAllMovies($search='', $nbPerPage=0, $offset=0) {
 function infoAllMovies($search='') {
->>>>>>> b19030eeee2705c178aeb73ff67960011ac7704d
     global $pdo;
 
     $movieInfoSelect = '
@@ -29,21 +25,12 @@ function infoAllMovies($search='') {
         ';
     }
 
-<<<<<<< HEAD
-    if ($nbPerPage > 0) {
-        $movieInfoSelect .= '
-            LIMIT '.$nbPerPage.' OFFSET '.$offset.'
-        ';
-    }
-
-=======
     // if ($nbPerPage > 0) {
     //     $movieInfoSelect .= '
     //         LIMIT '.$nbPerPage.' OFFSET '.$offset.'
     //     ';
     // }
- 
->>>>>>> b19030eeee2705c178aeb73ff67960011ac7704d
+    
     $request = $pdo->prepare($movieInfoSelect);
 
     if (!empty($search)) {
